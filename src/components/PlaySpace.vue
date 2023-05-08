@@ -145,8 +145,7 @@ export default {
 <style lang="scss" scoped>
 .playspace {
   background-color: grey;
-  max-width: 90vw;
-  max-height: 97vh;
+
   border-radius: 0.5rem;
   box-shadow: 0 0 10px 5px #000000, 3px 3px 5px 0 #ccc;
   padding: 0 1.5rem 1.5rem 1.5rem;

@@ -1,5 +1,5 @@
 <template>
-  <div class="header d-flex p-3 justify-content-around">
+  <div class="header d-flex py-3 px-2 justify-content-around">
     <div class="points d-flex align-items-center">
       <span class="m-3">010</span>
     </div>
@@ -31,8 +31,10 @@ export default {
 <style lang="scss" scoped>
 .header {
   box-shadow: inset 0 0 10px 5px #000000, 3px 3px 5px 0 #ccc;
-  max-height: 8%;
   border-radius: 0.3125rem;
+  @media screen and (max-width: 767px) {
+    max-height: 5rem;
+  }
   .time,
   .points {
     box-shadow: inset 0 0 10px 5px #000000, 3px 3px 5px 0 #ccc;
@@ -43,6 +45,9 @@ export default {
   }
   .new-game {
     box-shadow: 0 0 5px 3px #000000, 3px 3px 5px 0 #ccc;
+    @media screen and (max-width: 767px) {
+      padding: 5px 5px;
+    }
   }
 }
 </style>

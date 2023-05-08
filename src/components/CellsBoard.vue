@@ -174,12 +174,15 @@ export default {
 
 <style lang="scss" scoped>
 .board {
-  max-width: 38vw;
-  max-height: 38vw;
+  @media screen and (max-width: 767px) {
+    max-width: 85vw;
+    max-height: 85vw;
+  }
+
   .cell {
     border-radius: 0.3125rem;
-    width: calc(38vw / 10);
-    height: calc(38vw / 10);
+    width: calc(85vw / 10);
+    height: calc(85vw / 10);
     background-color: rgba($color: #000000, $alpha: 0.2);
     border: 0.125rem solid #000000;
     cursor: pointer;
