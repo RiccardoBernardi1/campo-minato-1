@@ -32,9 +32,7 @@ export default {
 .header {
   box-shadow: inset 0 0 10px 5px #000000, 3px 3px 5px 0 #ccc;
   border-radius: 0.3125rem;
-  @media screen and (max-width: 767px) {
-    max-height: 5rem;
-  }
+  max-height: 5rem;
   .time,
   .points {
     box-shadow: inset 0 0 10px 5px #000000, 3px 3px 5px 0 #ccc;
