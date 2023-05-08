@@ -55,10 +55,10 @@ export default {
         } else if (i % 10 != 1 && i % 10 != 0) {
           let count = 0;
           this.majorTest.forEach((element) => {
-            if (
-              this.bombs.includes(i - element) ||
-              this.bombs.includes(i + element)
-            ) {
+            if (this.bombs.includes(i - element)) {
+              count++;
+            }
+            if (this.bombs.includes(i + element)) {
               count++;
             }
           });
@@ -66,26 +66,31 @@ export default {
           this.cells.push(cell);
         } else if (i % 10 == 1) {
           let count = 0;
-          if (
-            this.bombs.includes(i + 10) ||
-            this.bombs.includes(i - 10) ||
-            this.bombs.includes(i + 1) ||
-            this.bombs.includes(i - 9) ||
-            this.bombs.includes(i + 11)
-          ) {
+
+          if (this.bombs.includes(i + 10)) {
+            count++;
+          } else if (this.bombs.includes(i - 10)) {
+            count++;
+          } else if (this.bombs.includes(i - 9)) {
+            count++;
+          } else if (this.bombs.includes(i + 1)) {
+            count++;
+          } else if (this.bombs.includes(i + 11)) {
             count++;
           }
           let cell = count != 0 ? `${count}` : "";
           this.cells.push(cell);
         } else if (i % 10 == 0) {
           let count = 0;
-          if (
-            this.bombs.includes(i + 10) ||
-            this.bombs.includes(i - 10) ||
-            this.bombs.includes(i + 9) ||
-            this.bombs.includes(i - 1) ||
-            this.bombs.includes(i - 11)
-          ) {
+          if (this.bombs.includes(i + 10)) {
+            count++;
+          } else if (this.bombs.includes(i - 10)) {
+            count++;
+          } else if (this.bombs.includes(i + 9)) {
+            count++;
+          } else if (this.bombs.includes(i - 1)) {
+            count++;
+          } else if (this.bombs.includes(i - 11)) {
             count++;
           }
           let cell = count != 0 ? `${count}` : "";
