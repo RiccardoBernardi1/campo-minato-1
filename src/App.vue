@@ -17,4 +17,7 @@ export default {
 
 <style lang="scss">
 @import "./style/global.scss";
+body {
+  background-color: black;
+}
 </style>
