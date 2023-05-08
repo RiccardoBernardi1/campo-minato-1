@@ -1,5 +1,5 @@
 <template>
-  <div class="playspace mt-3 mt-lg-5">
+  <div class="playspace mt-2 mt-lg-5">
     <h1 class="text-center mt-2 mb-3 fw-bold">Campo Minato</h1>
     <NewGame @new-game="newGame()" :minutes="minutes" :seconds="seconds" />
     <CellsBoard :cells="cells" :cellsClicked="cellsClicked" :bombs="bombs" />
