@@ -70,13 +70,17 @@ export default {
 
           if (this.bombs.includes(i + 10)) {
             count++;
-          } else if (this.bombs.includes(i - 10)) {
+          }
+          if (this.bombs.includes(i - 10)) {
             count++;
-          } else if (this.bombs.includes(i - 9)) {
+          }
+          if (this.bombs.includes(i - 9)) {
             count++;
-          } else if (this.bombs.includes(i + 1)) {
+          }
+          if (this.bombs.includes(i + 1)) {
             count++;
-          } else if (this.bombs.includes(i + 11)) {
+          }
+          if (this.bombs.includes(i + 11)) {
             count++;
           }
           let cell = count != 0 ? `${count}` : "";
@@ -85,13 +89,17 @@ export default {
           let count = 0;
           if (this.bombs.includes(i + 10)) {
             count++;
-          } else if (this.bombs.includes(i - 10)) {
+          }
+          if (this.bombs.includes(i - 10)) {
             count++;
-          } else if (this.bombs.includes(i + 9)) {
+          }
+          if (this.bombs.includes(i + 9)) {
             count++;
-          } else if (this.bombs.includes(i - 1)) {
+          }
+          if (this.bombs.includes(i - 1)) {
             count++;
-          } else if (this.bombs.includes(i - 11)) {
+          }
+          if (this.bombs.includes(i - 11)) {
             count++;
           }
           let cell = count != 0 ? `${count}` : "";
