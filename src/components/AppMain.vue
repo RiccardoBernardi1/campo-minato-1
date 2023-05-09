@@ -6,6 +6,7 @@ export default {
   data() {
     return {
       store,
+      result: "",
     };
   },
   components: {
@@ -18,13 +19,16 @@ export default {
   },
   watch: {
     isGameOver: function (val) {
-      if (val == "Win") {
-        document.querySelector(".victory").classList.add("ms-visible");
-      } else if (val == "Lose") {
-        document.querySelector(".loss").classList.add("ms-visible");
+      if (val == "victory" || val == "loss") {
+        document
+          .querySelectorAll(".game-over")
+          .forEach((e) => e.classList.add(store.gameOver));
+        this.result = val == "victory" ? "Hai Vinto!" : "Hai Perso";
       } else {
-        document.querySelector(".victory").classList.remove("ms-visible");
-        document.querySelector(".loss").classList.remove("ms-visible");
+        document
+          .querySelectorAll(".game-over")
+          .forEach((e) => e.classList.remove("victory", "loss"));
+        this.result = "";
       }
     },
   },
@@ -33,22 +37,29 @@ export default {
 
 <template>
   <main class="d-flex justify-content-center flex-wrap">
+    <div class="game-over fs-1 fw-bold mt-4 text-center d-none d-lg-block">
+      {{ result }}
+    </div>
     <PlaySpace />
-    <div class="victory fs-1 fw-bold mt-4">Hai Vinto!!!</div>
-    <div class="loss fs-1 fw-bold mt-4">Hai Perso!!!</div>
+    <div class="game-over fs-1 fw-bold mt-4 text-center">
+      {{ result }}
+    </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
-.victory {
-  color: lightgreen;
-  display: none;
-}
-.loss {
-  color: red;
-  display: none;
-}
-.ms-visible {
-  display: block;
+main {
+  @media screen and (min-width: 992px) {
+    align-items: center;
+    justify-content: space-around !important;
+  }
+  .game-over {
+    &.victory {
+      color: #f1f2f5;
+    }
+    &.loss {
+      color: #9e0707;
+    }
+  }
 }
 </style>
