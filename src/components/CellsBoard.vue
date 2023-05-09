@@ -37,6 +37,7 @@ export default {
         if (this.bombs.includes(n)) {
           cellClicked.classList.add("red");
           this.store.stopGame = true;
+          this.store.gameOver = "Lose";
           this.cells.forEach((e, i) => {
             if (this.bombs.includes(i + 1)) {
               document.getElementById(i + 1).classList.add("red");
@@ -52,6 +53,7 @@ export default {
             this.cells.length - this.bombs.length
           ) {
             this.store.stopGame = true;
+            this.store.gameOver = "Win";
             this.cells.forEach((e, i) => {
               if (this.bombs.includes(i + 1)) {
                 document.getElementById(i + 1).classList.add("red");
@@ -65,6 +67,7 @@ export default {
             this.cells.length - this.bombs.length
           ) {
             this.store.stopGame = true;
+            this.store.gameOver = "Win";
             this.cells.forEach((e, i) => {
               if (this.bombs.includes(i + 1)) {
                 document.getElementById(i + 1).classList.add("red");

@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     newGame(string) {
+      this.store.gameOver = "";
       this.store.startGame = false;
       this.store.stopGame = false;
       this.resetTimer();
