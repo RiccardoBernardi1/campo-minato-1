@@ -62,8 +62,6 @@ export default {
         this.store.cellsNumber = 130;
         this.store.bombNumber = 25;
         if (mediaQuery.matches) {
-          this.store.cellsForRow = 10;
-        } else if (mediaQueryTablet.matches) {
           this.store.cellsForRow = 13;
         } else {
           this.store.cellsForRow = 10;
