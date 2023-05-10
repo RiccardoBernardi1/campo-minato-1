@@ -1,7 +1,7 @@
 <template>
   <div class="playspace mt-2 mt-lg-3">
     <div class="title">
-      <h1 class="text-center mt-2 mb-3 fw-bold me-3">Campo Minato</h1>
+      <h1 class="text-center mt-2 mb-3 fw-bold">Campo Minato</h1>
       <select class="form-select form-select-sm w-auto ms-select">
         <option value="easy" @click="changeDifficulty('easy')" selected>
           Facile
