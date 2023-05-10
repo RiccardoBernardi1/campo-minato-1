@@ -41,7 +41,7 @@ export default {
       {{ result }}
     </div>
     <PlaySpace />
-    <div class="game-over fs-1 fw-bold mt-4 text-center">
+    <div class="game-over fs-1 fw-bold mt-3 text-center">
       {{ result }}
     </div>
   </main>

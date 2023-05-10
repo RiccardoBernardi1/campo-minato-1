@@ -1,7 +1,7 @@
 <template>
   <div class="header d-flex py-3 px-2 justify-content-around">
     <div class="points d-flex align-items-center">
-      <span class="m-3">010</span>
+      <span class="m-3">{{ store.bombNumber }}</span>
     </div>
     <button class="btn new-game btn-success fw-bold" @click="emitNewGame">
       Nuova Partita
@@ -14,8 +14,14 @@
 </template>
 
 <script>
+import { store } from "../store";
 export default {
   name: "NewGame",
+  data() {
+    return {
+      store,
+    };
+  },
   props: {
     minutes: String,
     seconds: String,

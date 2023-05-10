@@ -4,6 +4,11 @@ export const store = reactive({
   startGame: false,
   stopGame: false,
   gameOver: "",
+  difficulty: "easy",
+  cellsNumber: 100,
+  bombNumber: 10,
+  cellsForRow: 10,
+  cellsReadyToChange: false,
   setStartGame(value) {
     store.startGame = value;
   },
