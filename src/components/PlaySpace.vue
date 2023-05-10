@@ -228,7 +228,7 @@ export default {
   }
   .ms-select {
     position: absolute;
-    top: 0.9375rem;
+    top: 1.125rem;
     right: 1.5625rem;
     @media screen and (max-width: 47.5rem) {
       max-width: 1.3125rem;
