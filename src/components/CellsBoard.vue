@@ -185,6 +185,7 @@ export default {
   },
   computed: {
     areCellsready() {
+      console.log("are ready");
       return store.cellsReadyToChange;
     },
   },

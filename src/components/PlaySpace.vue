@@ -2,16 +2,13 @@
   <div class="playspace mt-2 mt-lg-3">
     <div class="title">
       <h1 class="text-center mt-2 mb-3 fw-bold">Campo Minato</h1>
-      <select class="form-select form-select-sm w-auto ms-select">
-        <option value="easy" @click="changeDifficulty('easy')" selected>
-          Facile
-        </option>
-        <option value="normal" @click="changeDifficulty('normal')">
-          Normale
-        </option>
-        <option value="hard" @click="changeDifficulty('hard')">
-          Difficile
-        </option>
+      <select
+        class="form-select form-select-sm w-auto ms-select"
+        @change="changeDifficulty($event.target.value)"
+      >
+        <option value="easy" selected>Facile</option>
+        <option value="normal">Normale</option>
+        <option value="hard">Difficile</option>
       </select>
     </div>
 
