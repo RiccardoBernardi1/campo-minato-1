@@ -234,6 +234,9 @@ export default {
       max-width: 1.3125rem;
       top: 0.625rem;
     }
+    @media screen and (min-width: 62rem) and (max-width: 93.75rem) {
+      max-width: 1.3125rem;
+    }
   }
 }
 </style>
